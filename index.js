@@ -7,28 +7,13 @@ function calculateBMI() {
   let female = document.getElementById("f").checked;
   console.table({ age, weight, height, male, female });
 
-  // You are going to write the code here before the curly braces 👇🏻
-}
-  let bmi = weight / ((height/100) ^2)
-  alert(bmi)
+  // You are going to write the code here before the curly braces 
+  const bmi = weight / height^2;
+  alert(
+    `Weight: ${weight}\nHeight:${height}\nAges{age}\nMale\nFemale:${female}
+      );
 
-  if (bmi <18.5)
-  {alert("Under weight")}
-
-  else if (bmi <2.5 && bmi >= 18.5)
-  {
-    alert("healthy wieght")
-  }
-  else if (bmi <30 && bmi >=25)
-  {
-    alert("over weight")
-  }
-  {
-  else if (bmi >=30)
-  }
-{ 
-alert ("Above obesity")
-}
-
-
+    BMI is: ${bmi}
+    `
   
+} 
