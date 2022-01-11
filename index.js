@@ -9,24 +9,42 @@ function calculateBMI() {
 
   // You are going to write the code here before the curly braces 
 
-  let bmi = weight / ((height/100) ^2) ; 
-  alert(bmi) ;
+  const bmi = weight / (height/100) **2 ; 
+  let bmiStatus;
 
-  if (bmi <18.5) 
-  {alert("Under weight")}
-
-  else if (bmi <25 && bmi >= 18.5)
+  if (bmi < 18.5) 
   {
-    alert("healthy weight")
+    bmiStatus = "Under weight"
   }
-  else if (bmi <30 && bmi >=25)
+
+  else if (bmi < 25 && bmi >= 18.5)
   {
-    alert("over weight")
+    bmiStatus = "healthy weight"
+  }
+  else if (bmi < 30 && bmi >=25)
+  {
+    bmiStatus = "over weight"
   }
   else if (bmi >= 30)
   {
-    alert ("Above obesity")
+    bmiStatus = "Above obesity"
+  }
+  let gender; 
+  if (male) {
+    gender = "Male";
+  } else {
+    gender = "Female";
   }
   
+  alert (
+  `Weight: ${weight} 
+  Height: ${height}
+  Age: ${age}
+  Gender: ${gender}
+  -------
+  BMI is: ${bmi}
+  Your body status is: ${bmiStatus}`
+  );
+
 
 } 
